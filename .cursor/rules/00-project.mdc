@@ -1,0 +1,65 @@
+---
+description: Core project rules for the RAG Assistant repository
+alwaysApply: true
+---
+
+# Project
+
+This repository contains a Python-based RAG Assistant built as an AI Engineering project.
+
+# Engineering Principles
+
+- Prefer simple and explicit implementations over unnecessary abstractions.
+- Keep modules small and focused on a single responsibility.
+- Follow separation of concerns.
+- Do not introduce new dependencies without explaining why they are needed.
+- Never hardcode API keys, credentials, secrets, or environment-specific values.
+
+# Development Workflow
+
+Before implementing a non-trivial change:
+
+1. Understand the requirement.
+2. Inspect the relevant existing code.
+3. Explain the proposed implementation.
+4. Identify the files that need to change.
+5. Identify relevant risks and edge cases.
+6. Implement incrementally.
+7. Add or update tests when behavior changes.
+8. Run relevant validation.
+9. Review the final diff.
+
+# RAG Principles
+
+Keep the main RAG responsibilities conceptually separated:
+
+- document ingestion
+- preprocessing
+- chunking
+- embeddings
+- indexing
+- retrieval
+- generation
+- evaluation
+
+Do not combine unrelated RAG responsibilities into one large module.
+
+# Runtime and Configuration
+
+- Target Python 3.12.
+- Manage project dependencies through `pyproject.toml`.
+- Use environment variables for secrets and environment-specific configuration.
+
+# Change Scope
+
+- Do not rewrite unrelated code.
+- Prefer minimal and focused diffs.
+- Preserve existing behavior unless the requirement explicitly changes it.
+- Explain significant architectural decisions before implementing them.
+
+# Testing and Validation
+
+- Add or update tests when behavior changes.
+- Prefer focused tests close to the changed behavior.
+- Run relevant tests before considering a task complete.
+- Report test failures or validation issues instead of hiding them.

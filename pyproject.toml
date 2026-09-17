@@ -1,0 +1,14 @@
+[project]
+name = "rag-assistant"
+version = "0.1.0"
+description = "A Python-based Retrieval-Augmented Generation assistant."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
